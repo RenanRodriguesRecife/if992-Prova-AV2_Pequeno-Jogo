@@ -50,3 +50,26 @@ Parede impede o movimento.
 
 getEntradaTeclado() recebe um caractere de entrada do usuário e guarda como ‘tecla’. ‘tecla’ é limpa e retornada ao chamar consumirEvento().
 
+### 3. Jogo
+
+Jogo guarda o **Mapa** e informações de execução do jogo, além de ter acesso ao **GeradorMapa** e ao **ArquivoJogo**. pausarJogo() mostra um menu com opções para continuar, salva ou carregar o jogo do arquivo.
+
+laco() realiza o laço principal do jogo, onde o mapa é mostrado de acordo com a câmera (TAMANHO_CAMERA x TAMANHO_CAMERA em volta da posição do Jogador). Lê a entrada utilizando **TecladoListener** e decide a entrada será consumida pelo **Jogador** para realizar movimento, ou pelo **Jogo** para pausar, salvar ou carregar.
+
+O método ainda verifica se o mapa foi finalizado, caso tenha, verifica se todos os **Tesouros** foram coletados e inicia o próximo nível, com tamanho igual ao nível + 9 e quantidade de tesouros igual ao nível. Ou finaliza o jogo, caso ainda existam tesouros. Em ambos os casos, a pontuação do nível é adicionada à pontuação total.
+
+### 4. ArquivoJogo
+
+Salva em um arquivo a pontuação, nível, e mapa (incluindo estado do jogador) em um arquivo e o carrega.
+
+### 5. Mapa
+
+Mantém **Coisas** e controlar suas ações, reações e sinalizadores.
+
+### 6. Camera
+
+Imprime na tela uma seção do **Mapa**.
+
+### 7. GeradorMapa
+
+Cria um **Mapa** com base nas características passadas. É usado no início de cada nível. probX representa a chance de uma **Coisa** do tipo X existir, um número aleatório deve ser gerado e caso seja menor do que probX a **Coisa** é criada e adicionada no mapa.
