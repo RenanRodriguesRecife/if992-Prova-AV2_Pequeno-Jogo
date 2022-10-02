@@ -45,3 +45,8 @@ Bomba sobrescreve os métodos entrarArea e sairArea, nesses o símbolo do objeto
 #### 1.5 Parede
 
 Parede impede o movimento.
+
+### 2. TecladoListener
+
+getEntradaTeclado() recebe um caractere de entrada do usuário e guarda como ‘tecla’. ‘tecla’ é limpa e retornada ao chamar consumirEvento().
+
