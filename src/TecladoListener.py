@@ -3,7 +3,9 @@ class TecladoListener(self):
         self.tecla = ''
 
     def getEntradaTeclado(self):
-        pass
+        self.tecla = input()[0]
 
     def consumirEvento(self):
-        pass
+        saida = self.tecla
+        self.tecla = ''
+        return saida
