@@ -5,7 +5,7 @@ class Coisa(ABC):
         self.simbolo = '-'
         self.visivel = True
         self.area = -1
-        self.posicao = [[],[]]
+        self.posicao = [0,0]
 
     @abstractmethod
     def reagirMovimento(self):
